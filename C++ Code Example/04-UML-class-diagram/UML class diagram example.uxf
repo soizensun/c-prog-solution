@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>182</x>
+      <y>70</y>
+      <w>336</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>UML Class Diagram
+(Unified Modeling Language)
+style=wordwrap
+halign=center
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>168</y>
+      <w>504</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Vector
+--
+-startX : int
+-startY : int
+-endX : int
+-endY : int
+--
+&lt;&lt;constructor&gt;&gt; +Vector()
+&lt;&lt;constructor&gt;&gt; +Vector(sx:int, sy:int, ex:int, ey:int)
++add(v2:Vector):Vector
++offset(dx:int, dy:int)
++toString():string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>476</y>
+      <w>462</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Account
+--
+-name : string
+-id : string
+-balance : double
+--
+&lt;&lt;constructor&gt;&gt; +Account(name:string, id:string)
++deposit(amount:double)
++withdraw(amount:double)
++getBalance():double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

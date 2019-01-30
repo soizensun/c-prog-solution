@@ -1,0 +1,60 @@
+#include <iostream>
+#include <iomanip>
+#include <stdexcept>
+#include <string>
+#include "Time.h"
+using namespace std;
+
+Time::Time(int hour, int minute, int second) {
+	setTime(hour, minute, second);
+}
+
+// -------------------------------------------
+//  "this" pointer
+//   - pointer ที่ชี้มาที่ object ปัจจุบัน
+//
+//   - เราสามารถใช้ this ในการเข้าถึง attribute
+//     ทำให้ระบุได้ชัดเจนว่า ตัวแปรนี้เป็น attribute
+//
+//   - เราสามารถใช้ "this" แยกระหว่าง attribute กับ
+//     local variable หรือ parameter
+// -------------------------------------------
+
+
+void Time::setTime(int hour, int minute, int second) {
+	if ((0 <= hour && hour <= 23) &&
+		(0 <= minute && minute <= 59) &&
+		(0 <= second && second <= 59)) {
+		this->hour = hour;
+		this->minute = minute;
+		this->second = second;
+	}
+	else { 
+		throw invalid_argument("hour, minute and/or second was out of range\n");
+	}
+}
+
+string Time::getUniversalFormat() const {
+	string s = "";
+
+	s = (hour < 10 ? "0" : "") + to_string(hour) + 
+		(minute < 10 ? ":0" : ":") + to_string(minute) +
+		(second < 10 ? ":0" : ":") + to_string(second);
+
+	return s;
+}
+
+string Time::getStandardFormat() const {
+	string s = "";
+
+	s = ((hour == 0 || hour == 12)? "12" : to_string(hour%12)) +
+		(minute < 10 ? ":0" : ":") + to_string(minute) +
+		(second < 10 ? ":0" : ":") + to_string(second) +
+		(hour < 12 ? " AM" : " PM");
+
+	return s;
+}
+
+
+
+

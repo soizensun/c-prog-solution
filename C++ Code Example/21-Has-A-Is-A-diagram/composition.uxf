@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>26</x>
+      <y>182</y>
+      <w>338</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Vector
+--
+&lt;&lt;constructor&gt;&gt; +Vector()
+&lt;&lt;constructor&gt;&gt; +Vector(ex:int, ey:int)
++add(v2:Vector):Vector
++offset(dx:int, dy:int)
++toString():string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>507</x>
+      <y>182</y>
+      <w>221</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Point
+--
+-x : int
+-y : int
+--
++offset(dx:int, dy:int)
++add(p2:Point):Point</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>247</y>
+      <w>182</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=2
+has</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>273</x>
+      <y>91</y>
+      <w>312</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Composition
+(Has-A Relationship)
+style=wordwrap
+halign=center
+fg=red
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
